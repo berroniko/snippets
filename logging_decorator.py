@@ -10,8 +10,9 @@ def logged(func, *args, **kwargs):
 	return inner
 	
 @logged
-def bar():
+def bar(text):
 	print('executing bar')
+	print(text)
 		
 
-bar()
+bar("hello")
