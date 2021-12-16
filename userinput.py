@@ -7,7 +7,7 @@ Created on Tue Jan 09 09:48:35 2018
 def inputFloat():
     n = None
     while True:
-        n = raw_input("give me a number!:")
+        n = input("give me a number!:")
         try: 
             n = float(n)
             break
@@ -18,7 +18,7 @@ def inputFloat():
 
 r = inputFloat()
 
-print "the number is: {0:.2f}".format(r) 
+print("the number is: {0:.2f}".format(r))
 
 
 
