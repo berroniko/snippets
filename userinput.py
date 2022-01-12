@@ -23,9 +23,4 @@ print("the number is: {0:.2f}".format(r))
 
 
 
-#%%
-
-
-
-
 
