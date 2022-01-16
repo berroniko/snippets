@@ -3,17 +3,18 @@
 import json
 import pprint
 
-
 folder_name = "../weather/data/"
 file_obs = 'ice_observations.json'
 filepath = folder_name + file_obs
+
 
 def load_json(file_name):
     with open(file_name) as infile:
         return json.load(infile)
 
+
 def gen_dict_extract(key, var):
-    if hasattr(var,'items'):
+    if hasattr(var, 'items'):
         for k, v in var.items():
             if k == key:
                 yield v
@@ -27,7 +28,6 @@ def gen_dict_extract(key, var):
 
 
 observations = load_json(filepath)
-
 
 print(list(gen_dict_extract('main', observations[0])))  # list, um mehrfache Ergebnisse anzuzeigen
 print(next(gen_dict_extract('pressure', observations[0])))

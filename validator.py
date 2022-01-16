@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Validator(ABC):
 
     def __set_name__(self, owner, name):
@@ -72,6 +73,7 @@ class ValidString(Validator):
 
 if __name__ == "__main__":
     """example how to use it in a class"""
+
 
     class Component:
         name = ValidString(minsize=3, maxsize=10, predicate=str.isupper)

@@ -23,7 +23,6 @@ def get_filename(title="Select file", filetypes=None, initialdir=None):
 
 
 if __name__ == '__main__':
-
     f = get_folderpath()
 
     f_types = (

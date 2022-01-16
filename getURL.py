@@ -1,4 +1,3 @@
-
 from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 
@@ -8,25 +7,22 @@ link = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSo
 
 f = urlopen(link)
 myfile = f.read()
-#print(myfile)
+# print(myfile)
 
-mystring = myfile.decode("utf-8") # convert bytes to string
+mystring = myfile.decode("utf-8")  # convert bytes to string
 
 root = ET.fromstring(mystring)
 
-print (root.find("request_index").text)
+print(root.find("request_index").text)
 
 for child in root:
     print(child.tag, child.attrib)
-
 
 a = list(root.iter('wind_speed_kt'))
 print(a)
 
 for elem in a:
     print(elem.text)
-
-
 
 """
 
@@ -49,4 +45,3 @@ gfs = NoaaGfsWeather(start_date, end_date)
 gfs_df = gfs.to_pandas_dataframe()
 
 """
-

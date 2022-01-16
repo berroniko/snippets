@@ -1,5 +1,5 @@
 class CountCalls:
-    def __init__(self,f):
+    def __init__(self, f):
         self.f = f
         self.count = 0
 
@@ -10,7 +10,7 @@ class CountCalls:
 
 @CountCalls
 def test_func(x):
-    return x**2
+    return x ** 2
 
 
 print(test_func(2))
