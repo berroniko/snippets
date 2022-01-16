@@ -44,8 +44,8 @@ if __name__ == '__main__':
             break
 
     # or by loop
-    # for i, _ in zip(access_large_csv(file, "Close"), range(5)):  # range only defines the end of the loop
-    #     print(i)
+    # for index, _ in zip(access_large_csv(file, "Close"), range(5)):  # range only defines the end of the loop
+    #     print(index)
 
     for i in access_large_csv(file, "Close"):
         print(i)
