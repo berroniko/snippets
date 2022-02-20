@@ -2,12 +2,16 @@ import re
 
 
 def regex_oneliner(string):
+    """short version of regex application
+    extracts numbers at the end of an string.
+    >>> regex_oneliner("asldkj1.23")
+    '23'
+    """
     res = re.search(r'(\d+)$', string)  # numbers at end of string
 
     if res:
-        return (res.group())
+        return res.group()
     else:
-        print('not found')
         return None
 
 
