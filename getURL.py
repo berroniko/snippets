@@ -5,31 +5,34 @@ import xml.etree.ElementTree as ET
 
 link = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs&requesttype=retrieve&format=xml&hoursBeforeNow=3&mostRecentForEachStation=constraint&stationString=EDDH"
 
-f = urlopen(link)
-myfile = f.read()
-# print(myfile)
 
-mystring = myfile.decode("utf-8")  # convert bytes to string
+def read_url(url):
+    f = urlopen(url)
+    my_file = f.read()
+    my_string = my_file.decode("utf-8")  # convert bytes to string
+    root = ET.fromstring(my_string)
+    return root
 
-root = ET.fromstring(mystring)
 
-print(root.find("request_index").text)
+def print_root(given_root) -> None:
+    print(given_root.find("request_index").text)
+    for child in given_root:
+        print(child.tag, child.attrib)
+    a = list(given_root.iter('wind_speed_kt'))
+    print(a)
+    for elem in a:
+        print(elem.text)
 
-for child in root:
-    print(child.tag, child.attrib)
 
-a = list(root.iter('wind_speed_kt'))
-print(a)
-
-for elem in a:
-    print(elem.text)
+root = read_url(link)
+print_root(root)
 
 """
 
 import untangle
 obj = untangle.parse('myfile')
 
-print (obj.root.child['raw_text'])
+print (obj.given_root.child['raw_text'])
 
 
 https://azure.microsoft.com/de-de/services/open-datasets/catalog/noaa-global-forecast-system/
