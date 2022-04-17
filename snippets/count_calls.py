@@ -1,4 +1,7 @@
 class CountCalls:
+    """
+    Callable decorator class to count how often function f was called
+    """
     def __init__(self, f):
         self.f = f
         self.count = 0

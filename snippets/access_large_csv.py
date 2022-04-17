@@ -1,12 +1,15 @@
 import csv
 
-# load data
-file = "data/ACWI.csv"
-
 
 def access_large_csv(filepath, fieldname):
     """opens csv file on filepath, provides the content as a generator yielding the elements of fieldname
-    it is thus able to handle files larger than the available memory"""
+    it is thus able to handle files larger than the available memory
+
+    :param filename: the path of the file to be opened
+    :param fieldname: The column 'fieldname' will be used
+    :return: yields the elements of the selected columns
+    """
+
     with open(file) as f:
         content = csv.reader(f)
         # header is the first line of content
@@ -26,6 +29,9 @@ def access_large_csv(filepath, fieldname):
 
 
 if __name__ == '__main__':
+
+    # load data
+    file = "data/ACWI.csv"
 
     # access using next()
     csv_gen = access_large_csv(file, "Close")

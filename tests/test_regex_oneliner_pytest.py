@@ -1,4 +1,4 @@
-from regex_oneliner import regex_oneliner
+from snippets.regex_oneliner import regex_oneliner
 
 
 def test_number_after_str():

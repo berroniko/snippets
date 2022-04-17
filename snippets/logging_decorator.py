@@ -5,6 +5,10 @@ logging.getLogger().setLevel(logging.DEBUG)
 
 
 def logged(func, *args, **kwargs):
+    """
+    Decorator to log the use of the decorated function
+    """
+
     logger = logging.getLogger()
 
     def inner(*args, **kwargs):
@@ -14,10 +18,12 @@ def logged(func, *args, **kwargs):
     return inner
 
 
-@logged
-def bar(text):
-    print('executing bar')
-    print(text)
+if __name__ == '__main__':
+    @logged
+    def bar(text, test=5):
+        print('executing bar')
+        print(text)
+        print(test)
 
 
-bar("hello")
+    bar("hello", test=12)

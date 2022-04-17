@@ -1,10 +1,6 @@
 from urllib.request import urlopen
 import xml.etree.ElementTree as ET
 
-"""get METAR from aviationweather.gov"""
-
-link = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs&requesttype=retrieve&format=xml&hoursBeforeNow=3&mostRecentForEachStation=constraint&stationString=EDDH"
-
 
 def read_url(url):
     f = urlopen(url)
@@ -24,17 +20,18 @@ def print_root(given_root) -> None:
         print(elem.text)
 
 
-root = read_url(link)
-print_root(root)
+if __name__ == '__main__':
+    # get METAR from aviationweather.gov
+    link = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs&requesttype=retrieve" \
+           "&format=xml&hoursBeforeNow=3&mostRecentForEachStation=constraint&stationString=EDDH "
+
+    root = read_url(link)
+    print_root(root)
+
+
+
 
 """
-
-import untangle
-obj = untangle.parse('myfile')
-
-print (obj.given_root.child['raw_text'])
-
-
 https://azure.microsoft.com/de-de/services/open-datasets/catalog/noaa-global-forecast-system/
 # This is a package in preview.
 from azureml.opendatasets import NoaaGfsWeather

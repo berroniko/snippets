@@ -1,6 +1,6 @@
 import unittest
 
-from regex_oneliner import regex_oneliner
+from snippets.regex_oneliner import regex_oneliner
 
 
 class RegexTest(unittest.TestCase):
