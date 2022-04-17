@@ -1,8 +1,9 @@
 from datetime import datetime
 import functools
 
-
-# https://www.youtube.com/watch?v=8qEnExGLZfY
+"""Decorator to identify the execution time of the decorated function
+source: https://www.youtube.com/watch?v=8qEnExGLZfY
+"""
 
 
 def timer(func):
