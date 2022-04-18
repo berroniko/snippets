@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>snippets package &#8212; snippets  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to snippets’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to snippets’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">snippets  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">snippets package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="snippets-package">
+<h1>snippets package<a class="headerlink" href="#snippets-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-snippets.access_large_csv">
+<span id="snippets-access-large-csv-module"></span><h2>snippets.access_large_csv module<a class="headerlink" href="#module-snippets.access_large_csv" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.access_large_csv.access_large_csv">
+<span class="sig-prename descclassname"><span class="pre">snippets.access_large_csv.</span></span><span class="sig-name descname"><span class="pre">access_large_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fieldname</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/access_large_csv.html#access_large_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.access_large_csv.access_large_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>opens csv file on filepath, provides the content as a generator yielding the elements of fieldname
+it is thus able to handle files larger than the available memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – the path of the file to be opened</p></li>
+<li><p><strong>fieldname</strong> – The column ‘fieldname’ will be used</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>yields the elements of the selected columns</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.count_calls">
+<span id="snippets-count-calls-module"></span><h2>snippets.count_calls module<a class="headerlink" href="#module-snippets.count_calls" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="snippets.count_calls.CountCalls">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">snippets.count_calls.</span></span><span class="sig-name descname"><span class="pre">CountCalls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/count_calls.html#CountCalls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.count_calls.CountCalls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Callable decorator class to count how often function f was called</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.decorator_with_arg">
+<span id="snippets-decorator-with-arg-module"></span><h2>snippets.decorator_with_arg module<a class="headerlink" href="#module-snippets.decorator_with_arg" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.decorator_with_arg.power_of">
+<span class="sig-prename descclassname"><span class="pre">snippets.decorator_with_arg.</span></span><span class="sig-name descname"><span class="pre">power_of</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/decorator_with_arg.html#power_of"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.decorator_with_arg.power_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>decorator accepting and argument</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.decorator_with_arg.power_of_2">
+<span class="sig-prename descclassname"><span class="pre">snippets.decorator_with_arg.</span></span><span class="sig-name descname"><span class="pre">power_of_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/decorator_with_arg.html#power_of_2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.decorator_with_arg.power_of_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-snippets.find_key_nested">
+<span id="snippets-find-key-nested-module"></span><h2>snippets.find_key_nested module<a class="headerlink" href="#module-snippets.find_key_nested" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.find_key_nested.gen_dict_extract">
+<span class="sig-prename descclassname"><span class="pre">snippets.find_key_nested.</span></span><span class="sig-name descname"><span class="pre">gen_dict_extract</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/find_key_nested.html#gen_dict_extract"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.find_key_nested.gen_dict_extract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts all occurrences of a keyword in a nested dictionary that may include lists of dictionaries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var</strong> – the dictionary to be searched</p></li>
+<li><p><strong>key</strong> – the key being searched for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a generator yielding all values related to the key</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.generator_comprehension">
+<span id="snippets-generator-comprehension-module"></span><h2>snippets.generator_comprehension module<a class="headerlink" href="#module-snippets.generator_comprehension" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-snippets.getURL">
+<span id="snippets-geturl-module"></span><h2>snippets.getURL module<a class="headerlink" href="#module-snippets.getURL" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.getURL.print_root">
+<span class="sig-prename descclassname"><span class="pre">snippets.getURL.</span></span><span class="sig-name descname"><span class="pre">print_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">given_root</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/snippets/getURL.html#print_root"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.getURL.print_root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.getURL.read_url">
+<span class="sig-prename descclassname"><span class="pre">snippets.getURL.</span></span><span class="sig-name descname"><span class="pre">read_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/getURL.html#read_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.getURL.read_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-snippets.logging_decorator">
+<span id="snippets-logging-decorator-module"></span><h2>snippets.logging_decorator module<a class="headerlink" href="#module-snippets.logging_decorator" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.logging_decorator.logged">
+<span class="sig-prename descclassname"><span class="pre">snippets.logging_decorator.</span></span><span class="sig-name descname"><span class="pre">logged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/logging_decorator.html#logged"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.logging_decorator.logged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator to log the use of the decorated function</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.profiler">
+<span id="snippets-profiler-module"></span><h2>snippets.profiler module<a class="headerlink" href="#module-snippets.profiler" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.profiler.profile">
+<span class="sig-prename descclassname"><span class="pre">snippets.profiler.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fnc</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/profiler.html#profile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.profiler.profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>A decorator that uses cProfile to profile a function</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.recursive_exercises">
+<span id="snippets-recursive-exercises-module"></span><h2>snippets.recursive_exercises module<a class="headerlink" href="#module-snippets.recursive_exercises" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.recursive_exercises.fact">
+<span class="sig-prename descclassname"><span class="pre">snippets.recursive_exercises.</span></span><span class="sig-name descname"><span class="pre">fact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/recursive_exercises.html#fact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.recursive_exercises.fact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.recursive_exercises.factorial">
+<span class="sig-prename descclassname"><span class="pre">snippets.recursive_exercises.</span></span><span class="sig-name descname"><span class="pre">factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/recursive_exercises.html#factorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.recursive_exercises.factorial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-snippets.regex_oneliner">
+<span id="snippets-regex-oneliner-module"></span><h2>snippets.regex_oneliner module<a class="headerlink" href="#module-snippets.regex_oneliner" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.regex_oneliner.regex_oneliner">
+<span class="sig-prename descclassname"><span class="pre">snippets.regex_oneliner.</span></span><span class="sig-name descname"><span class="pre">regex_oneliner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/regex_oneliner.html#regex_oneliner"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.regex_oneliner.regex_oneliner" title="Permalink to this definition">¶</a></dt>
+<dd><p>short version of regex application
+extracts numbers at the end of an string.
+&gt;&gt;&gt; regex_oneliner(“asldkj1.23”)
+‘23’</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.timer">
+<span id="snippets-timer-module"></span><h2>snippets.timer module<a class="headerlink" href="#module-snippets.timer" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.timer.calc">
+<span class="sig-prename descclassname"><span class="pre">snippets.timer.</span></span><span class="sig-name descname"><span class="pre">calc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/timer.html#calc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.timer.calc" title="Permalink to this definition">¶</a></dt>
+<dd><p>docstring of decorated function gets lost unless decorator uses wraps</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.timer.calc_loop">
+<span class="sig-prename descclassname"><span class="pre">snippets.timer.</span></span><span class="sig-name descname"><span class="pre">calc_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/timer.html#calc_loop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.timer.calc_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.timer.timer">
+<span class="sig-prename descclassname"><span class="pre">snippets.timer.</span></span><span class="sig-name descname"><span class="pre">timer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/timer.html#timer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.timer.timer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="snippets-tk-filedialog-module">
+<h2>snippets.tk_filedialog module<a class="headerlink" href="#snippets-tk-filedialog-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="snippets-tqdm-example-module">
+<h2>snippets.tqdm_example module<a class="headerlink" href="#snippets-tqdm-example-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="snippets-userinput-module">
+<h2>snippets.userinput module<a class="headerlink" href="#snippets-userinput-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-snippets.validator_classes">
+<span id="snippets-validator-classes-module"></span><h2>snippets.validator_classes module<a class="headerlink" href="#module-snippets.validator_classes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="snippets.validator_classes.OneOf">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">snippets.validator_classes.</span></span><span class="sig-name descname"><span class="pre">OneOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#OneOf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.OneOf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#snippets.validator_classes.Validator" title="snippets.validator_classes.Validator"><code class="xref py py-class docutils literal notranslate"><span class="pre">snippets.validator_classes.Validator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="snippets.validator_classes.OneOf.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#OneOf.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.OneOf.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="snippets.validator_classes.ValidNumber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">snippets.validator_classes.</span></span><span class="sig-name descname"><span class="pre">ValidNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minvalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxvalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#ValidNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.ValidNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#snippets.validator_classes.Validator" title="snippets.validator_classes.Validator"><code class="xref py py-class docutils literal notranslate"><span class="pre">snippets.validator_classes.Validator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="snippets.validator_classes.ValidNumber.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#ValidNumber.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.ValidNumber.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="snippets.validator_classes.ValidString">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">snippets.validator_classes.</span></span><span class="sig-name descname"><span class="pre">ValidString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#ValidString"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.ValidString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#snippets.validator_classes.Validator" title="snippets.validator_classes.Validator"><code class="xref py py-class docutils literal notranslate"><span class="pre">snippets.validator_classes.Validator</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="snippets.validator_classes.ValidString.validate">
+<span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#ValidString.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.ValidString.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="snippets.validator_classes.Validator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">snippets.validator_classes.</span></span><span class="sig-name descname"><span class="pre">Validator</span></span><a class="reference internal" href="_modules/snippets/validator_classes.html#Validator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.Validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="snippets.validator_classes.Validator.validate">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_classes.html#Validator.validate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_classes.Validator.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.validator_decorator">
+<span id="snippets-validator-decorator-module"></span><h2>snippets.validator_decorator module<a class="headerlink" href="#module-snippets.validator_decorator" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.validator_decorator.ensure_integer">
+<span class="sig-prename descclassname"><span class="pre">snippets.validator_decorator.</span></span><span class="sig-name descname"><span class="pre">ensure_integer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_decorator.html#ensure_integer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_decorator.ensure_integer" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks if the argument at position ‘index’ of the function complies with condition in line 22</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="snippets.validator_decorator.ensure_positive">
+<span class="sig-prename descclassname"><span class="pre">snippets.validator_decorator.</span></span><span class="sig-name descname"><span class="pre">ensure_positive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/snippets/validator_decorator.html#ensure_positive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#snippets.validator_decorator.ensure_positive" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks if the argument at position ‘index’ of the function complies with condition in line 8</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-snippets.week_nr">
+<span id="snippets-week-nr-module"></span><h2>snippets.week_nr module<a class="headerlink" href="#module-snippets.week_nr" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-snippets">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-snippets" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">snippets package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-snippets.access_large_csv">snippets.access_large_csv module</a></li>
+<li><a class="reference internal" href="#module-snippets.count_calls">snippets.count_calls module</a></li>
+<li><a class="reference internal" href="#module-snippets.decorator_with_arg">snippets.decorator_with_arg module</a></li>
+<li><a class="reference internal" href="#module-snippets.find_key_nested">snippets.find_key_nested module</a></li>
+<li><a class="reference internal" href="#module-snippets.generator_comprehension">snippets.generator_comprehension module</a></li>
+<li><a class="reference internal" href="#module-snippets.getURL">snippets.getURL module</a></li>
+<li><a class="reference internal" href="#module-snippets.logging_decorator">snippets.logging_decorator module</a></li>
+<li><a class="reference internal" href="#module-snippets.profiler">snippets.profiler module</a></li>
+<li><a class="reference internal" href="#module-snippets.recursive_exercises">snippets.recursive_exercises module</a></li>
+<li><a class="reference internal" href="#module-snippets.regex_oneliner">snippets.regex_oneliner module</a></li>
+<li><a class="reference internal" href="#module-snippets.timer">snippets.timer module</a></li>
+<li><a class="reference internal" href="#snippets-tk-filedialog-module">snippets.tk_filedialog module</a></li>
+<li><a class="reference internal" href="#snippets-tqdm-example-module">snippets.tqdm_example module</a></li>
+<li><a class="reference internal" href="#snippets-userinput-module">snippets.userinput module</a></li>
+<li><a class="reference internal" href="#module-snippets.validator_classes">snippets.validator_classes module</a></li>
+<li><a class="reference internal" href="#module-snippets.validator_decorator">snippets.validator_decorator module</a></li>
+<li><a class="reference internal" href="#module-snippets.week_nr">snippets.week_nr module</a></li>
+<li><a class="reference internal" href="#module-snippets">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to snippets’s documentation!</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/snippets.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to snippets’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">snippets  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">snippets package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, N. Kresse.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>
