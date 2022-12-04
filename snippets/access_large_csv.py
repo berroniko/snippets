@@ -1,26 +1,30 @@
 import csv
 
 
-def access_large_csv(filepath, fieldname):
-    """opens csv file on filepath, provides the content as a generator yielding the elements of fieldname
-    it is thus able to handle files larger than the available memory
+def access_large_csv(filepath: str,
+                     fieldname: str) -> str:
+    """Yields elements from csv-file.
 
-    :param filename: the path of the file to be opened
-    :param fieldname: The column 'fieldname' will be used
-    :return: yields the elements of the selected columns
+    Opens csv-file and provides the content as a generator yielding the elements of the column fieldname
+    It is able to handle files larger than the available memory
+
+    Args:
+        filename: path to the file to be read
+        fieldname: key of the column to be returned
+
+    Returns:
+        yields the elements of the selected columns
     """
 
-    with open(file) as f:
+    with open(filepath) as f:
         content = csv.reader(f)
-        # header is the first line of content
-        header = next(content)
-        # print(header)
-        # find the position of fieldname in header
+        header = next(content)  # the first line of content
+
         if fieldname in header:
-            pos = header.index(fieldname)
+            pos = header.index(fieldname)  # the position of fieldname in header
         else:
-            print("{} does not exist in file {}".format(fieldname, filepath))
-            print('header: ', header)
+            print(f"{fieldname} does not exist in file {filepath}")
+            print(f"header: {header}")
         while True:
             try:
                 yield next(content)[pos]
@@ -31,11 +35,11 @@ def access_large_csv(filepath, fieldname):
 if __name__ == '__main__':
 
     # load data
-    file = "data/ACWI.csv"
+    file = "../tests/test_data/ACWI.csv"
 
     # access using next()
     csv_gen = access_large_csv(file, "Close")
-    while True:
+    while False:
         try:
             print(next(csv_gen))
         except StopIteration:
@@ -50,8 +54,10 @@ if __name__ == '__main__':
             break
 
     # or by loop
-    # for index, _ in zip(access_large_csv(file, "Close"), range(5)):  # range only defines the end of the loop
-    #     print(index)
+    while False:
+        for index, _ in zip(access_large_csv(file, "Close"), range(5)):  # range only defines the end of the loop
+            print(index)
 
-    for i in access_large_csv(file, "Close"):
-        print(i)
+    while False:  # without range all rows are printed
+        for i in access_large_csv(file, "Close"):
+            print(i)
