@@ -1,23 +1,19 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jan 09 09:48:35 2018
+def input_float() -> float:
+    """Request user to provide a number.
 
-@author: th50kn
-"""
-
-
-def inputFloat():
+    Repeats the request until the user provides a number that can be converted to float.
+    """
     n = None
     while True:
-        n = input("give me a number!:")
+        n = input("Please provide a number!: ")
         try:
             n = float(n)
             break
         except ValueError:
-            print("I want a NUMBER!")
+            print("Only integers and floats are valid!\n")
     return n
 
 
-r = inputFloat()
+r = input_float()
 
-print("the number is: {0:.2f}".format(r))
+print(f"The number is: {r:.2f}")

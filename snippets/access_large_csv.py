@@ -5,15 +5,15 @@ def access_large_csv(filepath: str,
                      fieldname: str) -> str:
     """Yields elements from csv-file.
 
-    Opens csv-file and provides the content as a generator yielding the elements of the column fieldname
-    It is able to handle files larger than the available memory
+    Opens csv-file and provides the content as a generator yielding the elements of the column `fieldname`.
+    It is able to handle files larger than the available memory.
 
     Args:
-        filename: path to the file to be read
-        fieldname: key of the column to be returned
+        filename : path to the file to be read
+        fieldname : key of the column to be returned
 
-    Returns:
-        yields the elements of the selected columns
+    Yields:
+        Elements of the selected columns. One row per call
     """
 
     with open(filepath) as f:
