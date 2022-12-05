@@ -68,10 +68,13 @@
 
 
 <div class="viewcode-block" id="regex_oneliner"><a class="viewcode-back" href="../../snippets.html#snippets.regex_oneliner.regex_oneliner">[docs]</a><span class="k">def</span> <span class="nf">regex_oneliner</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;short version of regex application</span>
-<span class="sd">    extracts numbers at the end of an string.</span>
-<span class="sd">    &gt;&gt;&gt; regex_oneliner(&quot;asldkj1.23&quot;)</span>
-<span class="sd">    &#39;23&#39;</span>
+    <span class="sd">&quot;&quot;&quot;Short version of regex application.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        Extract numbers at the end of a string.</span>
+
+<span class="sd">        &gt;&gt;&gt; regex_oneliner(&quot;asldkj1.23&quot;)</span>
+<span class="sd">        &quot;23&quot;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d+)$&#39;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>  <span class="c1"># numbers at end of string</span>
 
