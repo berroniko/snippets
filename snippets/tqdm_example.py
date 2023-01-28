@@ -1,14 +1,15 @@
 from tqdm import tqdm
 from time import sleep
 
-"""
-Example for using tqdm
-Instantly make loops show a smart progress meter - just wrap any iterable with tqdm(iterable)
-"""
+def show_tqdm():
+    """Example for using tqdm
 
-r = 0
-for i in tqdm(range(1000)):
-    sleep(0.001)
-    r += i**2
+    Loops show a progress meter - just byte wrapping any iterable with tqdm(iterable)
+    """
 
-print(r)
+    for i in tqdm(range(1000)):
+        sleep(0.001)  # simulates execution of some lines of code
+
+
+if __name__ == '__main__':
+    show_tqdm()
