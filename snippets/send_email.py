@@ -19,7 +19,6 @@ host = credentials['host']
 #     msg.set_content(fp.read())
 
 def send(recipient: str, subject: str, message: str):
-
     msg = EmailMessage()
     msg['From'] = sender
     msg['To'] = recipient
@@ -35,4 +34,5 @@ def send(recipient: str, subject: str, message: str):
         server.send_message(msg)
 
 
-send(recipient="491729622430@mmsc.o2online.de", subject="from python recipient cell", message="test")
+if __name__ == '__main__':
+    send(recipient="491729622430@mmsc.o2online.de", subject="from python recipient cell", message="test")
