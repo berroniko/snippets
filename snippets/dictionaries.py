@@ -1,7 +1,8 @@
-from typing import Dict, Optional
+from typing import Any, Dict, Optional
 
 
-def diff_dicts(a: Dict[float | int], b: Dict[float | int], mode: Optional[str] = "inner") -> Dict[float | int]:
+def diff_dicts(a: Dict[Any, float | int], b: Dict[Any, float | int], mode: Optional[str] = "inner") -> Dict[
+    Any, float | int]:
     """Difference between key-value pairs of two dictionaries.
 
     For all modes except 'inner': Missing elements are replaced with the value '0'
