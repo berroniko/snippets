@@ -1,13 +1,18 @@
-def diff_dicts(a: dict, b: dict, mode: str = "inner") -> dict:
+from typing import Dict, Optional
+
+
+def diff_dicts(a: Dict[float | int], b: Dict[float | int], mode: Optional[str] = "inner") -> Dict[float | int]:
     """Difference between key-value pairs of two dictionaries.
 
     For all modes except 'inner': Missing elements are replaced with the value '0'
 
     Args:
+        a: left dictionary
+        b: right dictionary
         mode: one of inner (default), outer, left, right
 
     Returns:
-        dict a - dict b with the keys defined by mode"""
+        dictionary with the keys defined by mode and (value a - value b) for each key"""
 
     # for Python < 3.10
     # if mode == "inner":
