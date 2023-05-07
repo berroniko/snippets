@@ -1,6 +1,7 @@
 import datetime
 
-# datetime.date.isocalendar() is an instance-method returning a tuple containing year, weeknumber and weekday in respective order for the given date instance
+# datetime.date.isocalendar() is an instance-method returning a tuple containing year, weeknumber and weekday in
+# respective order for the given date instance
 # https://stackoverflow.com/questions/2600775/how-to-get-week-number-in-python
 
 hoy = datetime.date.today()
