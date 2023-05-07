@@ -9,7 +9,7 @@ def access_large_csv(filepath: str,
     It is able to handle files larger than the available memory.
 
     Args:
-        filename : path to the file to be read
+        filepath : path to the file to be read
         fieldname : key of the column to be returned
 
     Yields:

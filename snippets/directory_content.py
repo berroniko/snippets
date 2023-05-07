@@ -36,4 +36,4 @@ if __name__ == '__main__':
     import pprint
 
     dir_path = r'../snippets'''
-    pprint.pprint(directory_content(filepath=dir_path, kind="cred*"))
+    pprint.pprint(directory_content(filepath=dir_path, kind="g*"))
