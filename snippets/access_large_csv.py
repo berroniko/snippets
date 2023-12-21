@@ -1,8 +1,9 @@
 import csv
+from typing import Generator
 
 
 def access_large_csv(filepath: str,
-                     fieldname: str) -> str:
+                     fieldname: str) -> Generator:
     """Yields elements from csv-file.
 
     Opens csv-file and provides the content as a generator yielding the elements of the column `fieldname`.
