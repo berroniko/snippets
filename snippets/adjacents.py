@@ -5,6 +5,7 @@ def get_adjacents(f: float, col: Iterable[float]) -> Tuple[float, float]:
     """
     Return the tuple of adjacent numbers to number f within any iterable.
 
+    If f is not within col, the next smaller and next higher number are returned.
     If f is within col, the next smaller number and f are returned.
     If f is the smallest element in col, f and the next higher number are returned.
 
