@@ -12,8 +12,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
-# sys.path.insert(0, '/snippets')
+# sys.path.insert(0, os.path.abspath('..'))
+sys.path.insert(0, '/snippets')
 
 
 # -- Project information -----------------------------------------------------
@@ -29,7 +29,9 @@ author = 'N. Kresse'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
+    'sphinx.ext.duration',
+    'sphinx_rtd_theme',
+    'sphinx.ext.doctest',
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
     'sphinx.ext.napoleon'
@@ -58,6 +60,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 # html_theme = 'basic' / 'alabaster'
 # html_theme = 'classic'
+import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
 
 # Add any paths that contain custom static files (such as style sheets) here,
