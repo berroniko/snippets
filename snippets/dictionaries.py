@@ -42,7 +42,7 @@ def diff_dicts(a: Dict[Any, float | int], b: Dict[Any, float | int], mode: Optio
     return {k: a.get(k, 0) - b.get(k, 0) for k in keys}
 
 
-def sort_dict(d: dict):
+def sort_dict(d: dict, reverse: Optional[bool] = False):
     """Sort a dictionary by its keys.
 
     Example:
@@ -50,4 +50,4 @@ def sort_dict(d: dict):
         >>> sort_dict(d)
         {'w': 7, 'x': 8, 'y': 5, 'z': 6}
     """
-    return {key: d[key] for key in sorted(d)}
+    return {key: d[key] for key in sorted(d, reverse=reverse)}
