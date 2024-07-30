@@ -44,6 +44,14 @@ snippets.count\_calls module
    :undoc-members:
    :show-inheritance:
 
+snippets.currying\_partial module
+---------------------------------
+
+.. automodule:: snippets.currying_partial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 snippets.decorator\_with\_arg module
 ------------------------------------
 
