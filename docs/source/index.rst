@@ -1,0 +1,6 @@
+Snippets documentation
+======================
+
+.. toctree::
+
+   snippets
