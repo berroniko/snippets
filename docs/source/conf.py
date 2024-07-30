@@ -23,7 +23,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
-    # 'sphinx.ext.doctest',
+    'sphinx.ext.doctest',
+    'sphinx.ext.todo'
 ]
 
 templates_path = ['_templates']
