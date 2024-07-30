@@ -3,5 +3,4 @@ Snippets documentation
 
 .. toctree::
 
-   modules
-   api
+   snippets

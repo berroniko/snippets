@@ -1,4 +1,7 @@
-modules
-=======
+snippets
+========
 
-.. autofunction:: snippets.adjacents.get_adjacents
+.. toctree::
+   :maxdepth: 4
+
+   snippets
