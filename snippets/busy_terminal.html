@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>terminal</title>
+</head>
+<body>
+<div id="container" style="background-color: black; color: #b88f14; font-size: 18px; width: 600px; height: 600px; display: flex; flex-wrap: wrap; align-content: flex-start; overflow: hidden;">
+    <div id="numbers" style="width: 100%; display: flex; flex-wrap: wrap;"></div>
+</div>
+
+<script>
+    function updateNumbers() {
+        const numbersElement = document.getElementById("numbers");
+        const container = document.getElementById("container");
+
+        // List of strings to randomly display
+        const randomStrings = ["HELLO", "WORLD", "CODE", "calculating", "LOADING"];
+
+        // Define the percentage of characters to update per cycle (e.g., 10%)
+        const updatePercentage = 0.12;  // 10% of the characters will be updated each time
+
+        // Get the container's width and height
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+
+        // Create a temporary span to measure font size
+        const tempSpan = document.createElement("span");
+        tempSpan.style.fontSize = window.getComputedStyle(container).fontSize;
+        tempSpan.style.visibility = "hidden";
+        tempSpan.textContent = "0";  // One character to measure the size
+        document.body.appendChild(tempSpan);
+
+        // Measure the size of a character
+        const charWidth = tempSpan.offsetWidth;
+        const charHeight = tempSpan.offsetHeight;
+
+        // Remove the temporary element
+        document.body.removeChild(tempSpan);
+
+        // Calculate how many rows and columns fit in the container
+        const columns = Math.floor(containerWidth / charWidth);
+        const rows = Math.floor(containerHeight / charHeight);
+        const totalCharacters = rows * columns;
+
+        // Track the current state of the grid (numbers or strings)
+        let currentGrid = [];
+
+        // Initialize grid if it hasn't been done before
+        if (!numbersElement.currentGrid || numbersElement.currentGrid.length === 0) {
+            for (let i = 0; i < rows; i++) {
+                let lineNumbers = [];
+                for (let j = 0; j < columns; j++) {
+                    if (Math.random() < 0.08) {
+                        let randomString = randomStrings[Math.floor(Math.random() * randomStrings.length)];
+                        lineNumbers.push(randomString);
+                    } else {
+                        lineNumbers.push(Math.floor(Math.random() * 10).toString());
+                    }
+                }
+                currentGrid.push(lineNumbers);
+            }
+        } else {
+            currentGrid = numbersElement.currentGrid;
+        }
+
+        // Determine the number of characters to update
+        const charsToUpdate = Math.floor(totalCharacters * updatePercentage);
+
+        // Randomly update a defined percentage of the characters
+        for (let i = 0; i < charsToUpdate; i++) {
+            const randomRow = Math.floor(Math.random() * rows);
+            const randomCol = Math.floor(Math.random() * columns);
+
+            if (Math.random() < 0.003) {
+                currentGrid[randomRow][randomCol] = randomStrings[Math.floor(Math.random() * randomStrings.length)];
+            } else {
+                currentGrid[randomRow][randomCol] = Math.floor(Math.random() * 10).toString();
+            }
+        }
+
+        // Convert the current grid into HTML content
+        let content = currentGrid.map(row =>
+            `<div style="display: flex; width: 100%;">${row.map(cell => `<span style="flex: 1;">${cell}</span>`).join("")}</div>`
+        ).join("");
+
+        // Set the content inside the container
+        numbersElement.innerHTML = content;
+
+        // Store the current state of the grid
+        numbersElement.currentGrid = currentGrid;
+
+        // Update every 140 milliseconds
+        setTimeout(updateNumbers, 110);
+    }
+
+    updateNumbers();
+</script>
+
+</body>
+</html>
