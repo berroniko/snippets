@@ -17,7 +17,7 @@ mock_response.json.return_value = {'origin': '0.0.0.0'}
 mock_response.status_code = 200
 
 # alternative way to define the mock
-mock_response_2 = mock.Mock(name='mock response 2', **{'status_code': 200, 'json.return_value': {'origin': '0.0.0.0'}})
+mock_response_2 = mock.Mock(name='mock response 2', **{'status_code': 200, 'json.return_value': {'origin': '0.1.2.3'}})
 
 mock_requests_get = mock.Mock(return_value=mock_response_2)
 
