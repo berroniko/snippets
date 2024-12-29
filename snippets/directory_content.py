@@ -15,29 +15,30 @@ def directory_content(kind: str = 'file', filepath: Path | str | None = None) ->
                     or a search pattern as '*.py'
 
     Returns:
-        Content of the specified kind
+        List[Path]: Content of the specified kind.
     """
     result = []
 
     d = Path(filepath) if filepath else Path.cwd()
 
     if kind in ['file', 'dir', 'all']:
-        for elem in d.iterdir():
-            if elem.is_file() and (kind == 'file' or kind == 'all'):
-                result.append(elem)
-            if elem.is_dir() and (kind == 'dir' or kind == 'all'):
-                result.append(elem)
+        result = [
+            elem for elem in d.iterdir()
+            if (elem.is_file() and kind in ['file', 'all']) or (elem.is_dir() and kind in ['dir', 'all'])
+        ]
     else:
-        result = d.glob(kind)
+        result = list(d.glob(kind))
+
     return sorted(result)
 
 
 if __name__ == '__main__':
     import pprint
+    print(Path.cwd())
 
-    dir_path = r"../snippets"
-    pprint.pprint(directory_content(filepath=dir_path, kind="g*"))
+    dir_path = r"./snippets"
+    pprint.pprint(directory_content(filepath=dir_path, kind="s*"))
 
-    pprint.pprint(directory_content(kind="g*"))
+    pprint.pprint(directory_content(kind="s*"))
 
 
