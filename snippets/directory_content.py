@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import List
 
 
-def directory_content(filepath=Path.cwd(), kind: str = 'file') -> List:
+def directory_content(kind: str = 'file', filepath: Path | str | None = None) -> List[Path]:
     """get content of a directory.
 
     Only the contents of the directory itself is returned, not the contents of any subdirectories
@@ -15,11 +15,11 @@ def directory_content(filepath=Path.cwd(), kind: str = 'file') -> List:
                     or a search pattern as '*.py'
 
     Returns:
-        List: Content of the specified kind
+        Content of the specified kind
     """
     result = []
 
-    d = Path(filepath)
+    d = Path(filepath) if filepath else Path.cwd()
 
     if kind in ['file', 'dir', 'all']:
         for elem in d.iterdir():
@@ -35,5 +35,9 @@ def directory_content(filepath=Path.cwd(), kind: str = 'file') -> List:
 if __name__ == '__main__':
     import pprint
 
-    dir_path = r'../snippets'''
+    dir_path = r"../snippets"
     pprint.pprint(directory_content(filepath=dir_path, kind="g*"))
+
+    pprint.pprint(directory_content(kind="g*"))
+
+
