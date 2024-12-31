@@ -1,16 +1,16 @@
 import json
 from typing import Any
 
+
 class jsonPlugin:
     def read_json(self, filename):
         with open(filename) as f:
             return json.load(f)
 
-
     def write_json(self, filename, data):
-        with   open(filename   , 'w', encoding='utf-8') as f:
+        with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
-    
+
     def append_data_to_file(self, filename: str, data: Any):
         """Append data to existing json - file.
 
@@ -32,5 +32,5 @@ class jsonPlugin:
             data_json = []
         data_json.append(data)
         self.write_json(filename, data_json)
-        
+
         return data_json

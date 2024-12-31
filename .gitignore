@@ -1,3 +1,4 @@
 /docs/_build/
 **/credentials.json Alias
 .idea/*
+.vscode/*
