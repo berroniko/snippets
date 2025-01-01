@@ -1,7 +1,6 @@
 import pytest
 import os
 import json
-import pprint
 import sys
 sys.path.append(".")
 from snippets.json_plugin import jsonPlugin
