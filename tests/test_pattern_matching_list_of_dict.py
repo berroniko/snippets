@@ -5,7 +5,7 @@ from snippets.pattern_matching_list_of_dicts import find_pattern
 
 def test_alt_find_key_value(list_of_dict):
     data = list_of_dict.data
-    result = find_pattern(data=data, search_string="1EC15520621")
+    result = find_pattern(data=data, search_string={'REGISTRO': '1EC15520621'})
     assert result == {'FACTURA': '6901641744',
                       'NOMBRE': 'EAU DE TOILETTE OSMANTHUS / OSMANTHUS EAU DE TOILETTE'}
 

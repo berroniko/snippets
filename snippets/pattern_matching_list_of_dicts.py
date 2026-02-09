@@ -3,12 +3,15 @@
 # @ 25min
 
 class SearchPattern:
-    pass
+    def __init__(self, search_dict):
+        self.search_dict = search_dict
+        self.value = self.search_dict.values()
+        self.key = self.search_dict.keys()
 
 
 def find_pattern(data, search_string):
     for elem in data:
-        SearchPattern.value = search_string
+        sp = SearchPattern(search_string)
         match elem:
-            case {"REGISTRO": SearchPattern.value, "FACTURA": factura, "NOMBRE": nombre}:
+            case {sp.key: sp.value, "FACTURA": factura, "NOMBRE": nombre}:
                 return {"FACTURA": factura, "NOMBRE": nombre}
