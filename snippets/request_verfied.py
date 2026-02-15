@@ -1,16 +1,28 @@
 import requests
+import certifi
 
-def make_request(ID, producto=1, tipo=1, session=None):
+
+def make_request(ID, producto=1, tipo=1, session=None, verify=True):
     host = "https://expedientes.medicamentos.gob.sv"
     path = "/cosmeticos/get/data/cosmeticosPresentaciones"
     url = f"{host}{path}"
     params = {'ID': ID, 'producto': producto, 'tipo': tipo}
 
+    # translate verify flag into an appropriate value for requests
+    if verify is True:
+        verify_arg = certifi.where()
+    else:
+        verify_arg = verify  # can be False or a path to a cert bundle
+
     try:
         if session:
-            response = session.get(url=url, params=params, verify=False)
+            response = session.get(url=url, params=params, verify=verify_arg)
         else:
-            response = requests.get(url=url, params=params, verify=False)
+            response = requests.get(url=url, params=params, verify=verify_arg)
+    except requests.exceptions.SSLError:
+        print(
+            f"SSLError in Presentaciones.update(ID={ID}) - certificate verification failed")
+        return None
     except requests.exceptions.ConnectionError:
         print(f"ConnectionError in Presentaciones.update(ID={ID})")
         return None
@@ -20,8 +32,10 @@ def make_request(ID, producto=1, tipo=1, session=None):
         return None
     else:
         result = response.json()
-    
+
     return result
 
+
 if __name__ == '__main__':
-    print(make_request(ID="1EC01230205", producto=1, tipo=1, session=None))
+    print(make_request(ID="1EC01230205", producto=1,
+          tipo=1, session=None, verify=True))
