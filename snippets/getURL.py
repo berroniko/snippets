@@ -23,7 +23,7 @@ def print_root(given_root) -> None:
 if __name__ == '__main__':
     # get METAR from aviationweather.gov
     link = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=tafs&requesttype=retrieve" \
-           "&format=xml&hoursBeforeNow=3&mostRecentForEachStation=constraint&stationString=EDDH "
+           "&format=xml&hoursBeforeNow=3&mostRecentForEachStation=constraint&stationString=EDDH"
 
     root = read_url(link)
     print_root(root)
