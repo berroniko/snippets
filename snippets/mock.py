@@ -9,9 +9,6 @@ def get_ip():
         return response.json()['origin']
 
 
-# get_ip()
-
-
 mock_response = mock.Mock()
 mock_response.json.return_value = {'origin': '0.0.0.0'}
 mock_response.status_code = 200
